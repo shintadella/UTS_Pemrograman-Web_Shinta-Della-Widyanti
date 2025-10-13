@@ -1,0 +1,236 @@
+body { /*mengatur seluruh halaman*/
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #fff0f5;
+    color: #333;
+     animation: fadeInUp 1.2s ease-in-out;
+}
+
+.navbar {   /*bagian menu atas*/
+    background: linear-gradient(90deg, #ff80bf, #ffb6d9);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+nav a { /* gaya untuk link*/
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+nav a:hover, nav a.active {  /*efek saat hover aktif*/
+    background-color: white;
+    color: #ff66b2;
+}
+
+.about {  /*halaman about ukuran kotak*/
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #fff5fa;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about h2 {  /*judul about*/
+    color: #cc0066;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p {  /*paragraf about*/
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.about img:hover {  /*efek zoom*/
+    transform: scale(1.05);
+}
+
+/* Halaman utama */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 10%;
+    background: linear-gradient(180deg, #ffe6f2, #fff);
+    transition: all 0.6s ease-in-out;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.hero-text:hover {
+    transform: translateY(-5px);
+    opacity: 0.9;
+}
+
+.hero-img img {
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+button {
+    background-color: #ff66b2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {  /*efek tombol*/
+    background-color: #ff3385;
+    transform: translateY(-3px) scale(1.05);
+}
+
+
+/* produk */
+.products h2 {
+    text-align: center;
+    color: #cc0066;
+    margin-top: 40px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px;
+}
+
+.item img {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 230px;
+    transition: transform 0.3s;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+    cursor: pointer
+}
+
+.item p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 8px;
+    color: #cc0066;
+    font-weight: bold;
+}
+
+.item a {
+    text-decoration: none;
+    color: #cc0066;
+}
+
+.item a:hover p {
+    text-decoration: underline;
+}
+
+/* form contact */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact {
+    padding: 60px 20px;
+    background-color: #ffe6f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    width: 400px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #cc0066;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ff99cc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#StatusPesan {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#StatusPesan.show {
+    opacity: 1;
+    display: block;
+}
+
+.footer {
+    background: linear-gradient(90deg, #ff80bf, #ffb6d9);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.1);
+    font-size: 0.95em;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
